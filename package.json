@@ -9,7 +9,7 @@
         "parcel:start": "parcel src/index.html --hmr-port 1235",
         "parcel:build": "parcel build src/index.html",
         "clean": "rm -rf dist .parcel-cache",
-        "build": "yarn clean && yarn postcss:build && yarn parcel:build",
+        "build": "npm-run-all -p clean postcss:build parcel:build",
         "start": "npm-run-all -p postcss:watch parcel:start"
     },
     "keywords": [
