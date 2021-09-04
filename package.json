@@ -4,8 +4,8 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "postcss:watch": "postcss src/index.pcss -o src/index.css --env development -w",
-        "postcss:build": "postcss src/index.pcss -o src/index.css --env production",
+        "postcss:watch": "NODE_ENV=development postcss src/index.pcss -o src/index.css --env=development -w",
+        "postcss:build": "NODE_ENV=production postcss src/index.pcss -o src/index.css --env=production",
         "parcel:start": "parcel src/index.html --hmr-port 1235",
         "parcel:build": "parcel build src/index.html",
         "clean": "rm -rf dist .parcel-cache",
